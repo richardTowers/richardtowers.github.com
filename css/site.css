@@ -1,0 +1,19 @@
+/* Fix for the fixed-position navbar overlapping content */
+@media screen and (min-width: 980px) {
+	body {
+		padding-top: 60px;
+	}
+}
+
+/* Fix for brand appearing too far over on the left */
+.navbar a.brand {
+	margin-left: 0px;
+}
+
+.container-fluid {
+	min-height: 600px; 
+}
+
+footer {
+	padding: 10px 40px 30px 40px;
+}
