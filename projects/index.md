@@ -18,9 +18,21 @@ rows:
             The mandelbrot set is the poster boy of the fractal world. Infinite complexity from a simple iterated polynomial. It also makes a good test case for playing with the html canvas tag.
           url: /Mandelbrot
           isReady: false
+    - projects:
+        - title: Angular Risk
+          description: |
+            An experiment using the <a href="http://angularjs.org/">AngularJS</a> framework to build a rich client side web app with similar functionality to those I work on at work.
+          url: /AngularRisk
+          isReady: false
+        - title: Poll Balancer
+          description: |
+            A little canvas game based on the classic <a href="http://anji.sourceforge.net/polebalance.htm">Poll Balancing</a> problem in control theory. The player has to write some JavaScript to sove the problem.
+          url: /PollBalancer
+          isReady: false
+
 ---
 
-The following are some demos of a few projects I've been working on in my spare time. Feel free to have a browse. If you find something interesting the source is all on [github](https://github.com/richardTowers). Comments (constructive or otherwise) are welcome.
+The following are some demos of a few projects I've been working on in my spare time. Some are only half done, and some are still concepts (hence the disabled links). Feel free to have a browse. If you find something interesting the source is all on [github](https://github.com/richardTowers). Comments (constructive or otherwise) are welcome.
 
 <div class="projects">
 	{% for row in page.rows %}
