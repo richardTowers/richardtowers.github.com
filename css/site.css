@@ -1,5 +1,5 @@
 /* Fix for the fixed-position navbar overlapping content */
-@media screen and (min-width: 980px) {
+@media all and (min-width: 980px) {
 	body {
 		padding-top: 60px;
 	}
@@ -10,10 +10,16 @@
 	margin-left: 0px;
 }
 
+/* Make sure the footer appears a decent way down the page */
 .container-fluid {
 	min-height: 600px; 
 }
 
 footer {
 	padding: 10px 40px 30px 40px;
+}
+
+.projects h2 {
+	font-size: 25px;
+	margin-bottom: 0;
 }
