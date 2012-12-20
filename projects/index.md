@@ -16,7 +16,7 @@ rows:
         - title: Pole Balancer
           description: |
             A little canvas game based on the classic <a href="http://anji.sourceforge.net/polebalance.htm">Pole Balancing</a> problem in control theory. The player has to write some JavaScript to sove the problem.
-          url: /PoleBalancer
+          url: /poleBalancer
           isReady: true
     - projects:
         - title: Angular Risk
