@@ -13,21 +13,21 @@ rows:
             A silly JavaScript transcompiler. It just adds a bit of sugar so that you can use the <code>() -></code> syntax from CoffeeScript rather than JS's horrible <code>function</code> keyword. The implementation is naive in the <em>extreme</em>.
           url: https://github.com/richardTowers/decaf-script
           isReady: true
-        - title: Mandelbrot Set
+        - title: Pole Balancer
           description: |
-            The mandelbrot set is the poster boy of the fractal world. Infinite complexity from a simple iterated polynomial. It also makes a good test case for playing with the html canvas tag.
-          url: /Mandelbrot
-          isReady: false
+            A little canvas game based on the classic <a href="http://anji.sourceforge.net/polebalance.htm">Pole Balancing</a> problem in control theory. The player has to write some JavaScript to sove the problem.
+          url: /PoleBalancer
+          isReady: true
     - projects:
         - title: Angular Risk
           description: |
             An experiment using the <a href="http://angularjs.org/">AngularJS</a> framework to build a rich client side web app with similar functionality to those I work on at work.
           url: /AngularRisk
           isReady: false
-        - title: Poll Balancer
+        - title: Mandelbrot Set
           description: |
-            A little canvas game based on the classic <a href="http://anji.sourceforge.net/polebalance.htm">Poll Balancing</a> problem in control theory. The player has to write some JavaScript to sove the problem.
-          url: /PollBalancer
+            The mandelbrot set is the poster boy of the fractal world. Infinite complexity from a simple iterated polynomial. It also makes a good test case for playing with the html canvas tag.
+          url: /Mandelbrot
           isReady: false
 
 ---
