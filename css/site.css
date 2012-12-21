@@ -6,8 +6,8 @@
 }
 
 /* Fix for brand appearing too far over on the left */
-.navbar a.brand {
-	margin-left: 0px;
+.navbar .brand {
+	margin-left: 0;
 }
 
 /* Make sure the footer appears a decent way down the page */

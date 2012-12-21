@@ -19,15 +19,15 @@ rows:
           url: /poleBalancer
           isReady: true
     - projects:
-        - title: Angular Risk
-          description: |
-            An experiment using the <a href="http://angularjs.org/">AngularJS</a> framework to build a rich client side web app with similar functionality to those I work on at work.
-          url: /AngularRisk
-          isReady: false
         - title: Mandelbrot Set
           description: |
             The mandelbrot set is the poster boy of the fractal world. Infinite complexity from a simple iterated polynomial. It also makes a good test case for playing with the html canvas tag.
           url: /Mandelbrot
+          isReady: true
+        - title: Angular Risk
+          description: |
+            An experiment using the <a href="http://angularjs.org/">AngularJS</a> framework to build a rich client side web app with similar functionality to those I work on at work.
+          url: /AngularRisk
           isReady: false
 
 ---
