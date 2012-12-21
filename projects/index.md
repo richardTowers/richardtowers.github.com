@@ -22,7 +22,7 @@ rows:
         - title: Mandelbrot Set
           description: |
             The mandelbrot set is the poster boy of the fractal world. Infinite complexity from a simple iterated polynomial. It also makes a good test case for playing with the html canvas tag.
-          url: /Mandelbrot
+          url: /mandelbrot
           isReady: true
         - title: Angular Risk
           description: |
