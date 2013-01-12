@@ -36,9 +36,9 @@ Anyway. Knowing Redmine's API was pretty badass, I thought: "there's an ideal op
 Project
 ----------------
 
-[Kanbanter][6] is the terribly named result! It took me about a weekend to get it up and running, but it's still very rough around the edges. The initial reaction at work has been really positive. I'm trying to cultivate the idea in my non-developer colleagues that developers are wizards.
+[Kanbanter][6] is the terribly named result. It took me about a weekend to get it up and running, but it's still very rough around the edges. The initial reaction at work has been really positive. I'm trying to cultivate the idea in my non-developer colleagues that developers are wizards.
 
-There were a couple of technical annoyances getting it up and running. The biggest of these was due to the redmine installation running on a separate domain. Because of the [Same Origin Policy][7] this meant that I had to reverse proxy all my requests through a server on the same domain. In the future I hope to restructure the project so that it runs as a redmine plugin. Of course, that would require my companies IT team to allow me to install an open source plugin!
+There were a couple of technical annoyances getting it up and running. The biggest of these was due to the redmine installation running on a separate domain. Because of the [Same Origin Policy][7] this meant that I had to reverse proxy all my requests through a server on the same domain. In the future I hope to restructure the project so that it runs as a redmine plugin. Of course, that would require my companies IT team to allow me to install an open source plugin&hellip;
 
 I'll talk more about the technical details and progress in future posts.
 
