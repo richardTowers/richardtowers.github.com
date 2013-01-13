@@ -12,7 +12,7 @@ I'd like to get some of my colleagues involved in working on the project, but I 
 
 To make things a bit easier, I've set up an installation of redmine that allows [CORS][2] on [Heroku][3].
 
-An Epic Battle
+A Sunday Well Spent
 ----------------
 
 There are two parts to a CORS request. First the client sends an HTTP `OPTIONS` request to the remote server (this is known as the preflight check). The remote server is expected to accept this request and return some `Access-Control` headers in the response. Assuming that's succesful, the client can then proceed with the main request (be it `GET`, `POST`, `PUT` or whatever). Again, the server is expected to respond with `Access-Control` headers set.
@@ -23,7 +23,7 @@ Making straight `$.get()`s with jQuery worked fine, I could see that the headers
 
 I had a look at the `heroku logs` and, sure enough, Redmine was not routing HTTP `OPTIONS` requests - hence the 404. Not being a rails expert I wasn't sure how to get all Redmine's routes to accept these requests. Quick and Dirty solution - a new catchall route for all `OPTIONS` requests.
 
-How To
+How To:
 ---------------
 
 First let's adress the preflight check. I've added a whole new controller, just for this, at `/app/controllers/cors_controller.rb`. It looks like:
