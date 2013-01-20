@@ -24,11 +24,11 @@ rows:
             The mandelbrot set is the poster boy of the fractal world. Infinite complexity from a simple iterated polynomial. It also makes a good test case for playing with the html canvas tag.
           url: /mandelbrot
           isReady: true
-        - title: Angular Risk
+        - title: 5nake
           description: |
-            An experiment using the <a href="http://angularjs.org/">AngularJS</a> framework to build a rich client side web app with similar functionality to those I work on at work.
-          url: /AngularRisk
-          isReady: false
+            A quick and dirty nokia style snake game using html5 canvas. Also uses angularJS and mongoDB for some user interface / presistence wizadry,
+          url: /5nake
+          isReady: true
 
 ---
 
