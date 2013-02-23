@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Kanban with AngularJS
+summary: |
+    At work we've been experimenting with Agile software development methods. On the whole, I'm not completely convinced by the whole Agile hoo-ha. Neverltheless I decided to use it as an excuse to try building a little web app. Intoducing kanbanter, a terribly named javascript app using AngularJS and the redmine API.
 ---
 
 Kanban with AngularJS and Redmine

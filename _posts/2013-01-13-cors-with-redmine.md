@@ -1,6 +1,8 @@
 ---
 layout: post
 title: CORS with Redmine
+summary: |
+    I mentioned in my last post that I was working on <a href="https://github.com/richardTowers/kanbanter">an AngularJS app</a> that queries the Redmine API. In this post I talk about how I worked around the same-origin policy using CORS so that my colleagues could get involved in development without having to mess with scary servers and such.
 ---
 
 CORS with Redmine

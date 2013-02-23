@@ -3,13 +3,18 @@ layout: default
 title: Richard Towers
 ---
 
-Hello Internets!
-====================
+<img alt="Me riding a surfboard int the wind on some sand" src="http://www.gravatar.com/avatar/49aaba480eb0629ee5a6ba72af5e89ff?s=160&amp;d=identicon&amp;r=PG" class="pull-right gravatar">
 
-I'm **Richard**, a web developer from York, England. I'm currently working for an insurance software house called Acturis, in The City of London.
+Hi! I'm Richard.
+===================
 
-I enjoy writing neat code. I mostly do this in C#, but I also have to dive into JavaScript from time to time. When I get a chance I like to
-play with nicer client side languages like TypeScript and CoffeeScript.
+This is my little bit of the internet. I'm hoping to post the occasional blog and some projects I've been working on.
 
-This site will host a few of my side projects, and possibly a few blog posts if I ever get time! For more details, have a look at
-[my first new blog post](/2012/12/16/new-site.html).
+<div>
+{% for post in site.posts %}
+	<div class="post">
+		<h3><a href="{{ post.url }}">{{post.title}}</a></h3>
+		{{ post.summary }}
+	</div>
+{% endfor %}
+</div>

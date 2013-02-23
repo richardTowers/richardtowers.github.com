@@ -24,7 +24,18 @@ footer {
 	margin-bottom: 0;
 }
 
+@media all and (min-width: 980px) {
+	.projects .row-fluid p {
+		min-height: 160px;
+	}
+}
+
 figure {
+	padding: 2px;
+	border: 1px solid #ddd;
+}
+
+.gravatar {
 	padding: 2px;
 	border: 1px solid #ddd;
 }
