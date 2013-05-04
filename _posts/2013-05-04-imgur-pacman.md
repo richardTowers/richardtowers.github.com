@@ -29,6 +29,7 @@ I'm going to put a fixed (but quite large) limit on the technologies I'm allowin
 #### Technologies
 
 * [TypeScript](http://www.typescriptlang.org/) for some static typing goodness
+* [Fabric](http://fabricjs.com/) to make working with the canvas less of a nightmare
 * [Require](http://requirejs.org/) for modularity (using TypeScript's `--module AMD` flag)
 * [QUnit](http://qunitjs.com/) and [Sinon](http://sinonjs.org/) for testing
 
