@@ -17,7 +17,7 @@ A while back @konman96 posted an awesome gif on imgur. Very stylishly done.
 
 People seemed interested in a game, and I've been looking for an excuse to get stuck in to some simple HTML5 game stuff, so I thought I'd have a go.
 
-My initial attempts didn't get very far. Turns out, there are quite a lot of features possible in a game like this and I wanted to do all of them. Perfectly. Each time I made a finished one thing and started a new one, I'd decide that things weren't perfect and have to go back. Too loosely typed. Not modular enough. No unit tests. Yuk.
+My initial attempts didn't get very far. Turns out, there are quite a lot of features possible in a game like this and I wanted to do all of them. Perfectly. Each time I finished one thing and started a new one, I'd decide that things weren't perfect and have to go back. Too loosely typed. Not modular enough. No unit tests. Yuk.
 
 I tell myself that the whole point of spare-time hacking like this is to try out new approaches and technologies that I wouldn't get a chance to use at work. To be fair, I still think that is a Good Thing&#0153;. However, when it gets to the point that I can't get anything done it's not so fun. I need to make a conscious effort to avoid this destructive kind of [magpie development](http://www.codinghorror.com/blog/2008/01/the-magpie-developer.html).
 
