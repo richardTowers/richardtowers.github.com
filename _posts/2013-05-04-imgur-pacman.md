@@ -43,7 +43,8 @@ If I get as far as Highscores then I'll be looking to use:
 
 Each of the following will be addressed as an independent chunk of work, and should be accompanied by unit tests and a blog post.
 
-* Imgur-man stands alone on a grid full of food
+* Imgur-man stands alone on a maze
+* The maze is full of food
 * Imgur-man moves in a fixed direction
 * Imgur-man wraps around
 * The player can control the direction of Imgur-man
