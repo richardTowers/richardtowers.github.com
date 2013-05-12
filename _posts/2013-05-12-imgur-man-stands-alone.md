@@ -112,6 +112,6 @@ Result
 	
 	<div class="span7">
 		<p>And there's the result. Not very impressive yet, since it's just positioning two images on a canvas. It should be a good starting point for the rest of the game though.</p>
-		<p>ImgurMan stands alone on an empty maze.</p>
+		<p><a href="https://github.com/richardTowers/imgur-man/tree/v0.1" title="git tag of the repo as of this post.">ImgurMan stands alone on an empty maze.</a></p>
 	</div>
 </div>
