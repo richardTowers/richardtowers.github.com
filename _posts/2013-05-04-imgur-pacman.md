@@ -43,7 +43,7 @@ If I get as far as Highscores then I'll be looking to use:
 
 Each of the following will be addressed as an independent chunk of work, and should be accompanied by unit tests and a blog post.
 
-* Imgur-man stands alone on a maze
+* [Imgur-man stands alone on a maze](/2013/05/12/imgur-man-stands-alone.html)
 * The maze is full of food
 * Imgur-man moves in a fixed direction
 * Imgur-man wraps around

@@ -54,6 +54,10 @@ figure {
 	font-family: "Helvetica Neue";
 }
 
+figure {
+	margin: 0;
+}
+
 figcaption {
 	font-size: small;
 	font-style: italic;
