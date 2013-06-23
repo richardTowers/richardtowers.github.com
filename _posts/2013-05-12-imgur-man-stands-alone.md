@@ -115,3 +115,9 @@ Result
 		<p><a href="https://github.com/richardTowers/imgur-man/tree/v0.1" title="git tag of the repo as of this post.">ImgurMan stands alone on an empty maze.</a></p>
 	</div>
 </div>
+
+<div class="alert alert-info">
+	<button type="button" class="close" data-dismiss="alert">&times;</button>
+	This is the first in a <a href="/2013/05/04/imgur-pacman.html">series of blog posts</a>.
+	You can read the next post <a href="/2013/06/22/imgur-man-gets-some-food.html">here</a>.
+</div>
