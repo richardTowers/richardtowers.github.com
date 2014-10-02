@@ -113,7 +113,7 @@ First let's change back into the root `CruiseControl.NET` directory.
 
 <span class="badge badge-important">Hack</span> The NAnt build script puts the binaries for the web dashboard in `Build/Server/WebDashboard`, but to run the server we need them next to the `Web.config` file and the other assets. We can copy the files into `project/WebDeshboard/bin`.
 
-    cp -R Build/Server/WebDashboard project/WebDashboard/bin
+    cp -R Build/WebDashboard project/WebDashboard/bin
 
 We can then `cd` into the dashboard directory:
 
