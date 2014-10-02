@@ -54,7 +54,7 @@ Once that's done we should have a CruiseControl.NET directory which we can `cd` 
 Getting Mono
 ------------
 
-Because CCNet is a C# .NET application we need to mono compiler to build it and the mono runtime to run it. Again these are easy to install with your package manager:
+Because CCNet is a C# .NET application we need the mono compiler to build it and the mono runtime to run it. Again these are easy to install with your package manager:
 
     sudo apt-get install mono-devel mono-xsp
 
@@ -63,10 +63,9 @@ That might take a minute or so, after which we're ready to build CCNet.
 Building CCNet
 --------------
 
-<span class="badge badge-important">Hack</span> At the moment mono's Visual Basic support is a bit dodgy, so we have to remove the mono example project from the solution file before we build. We can `grep` the project out of the file:
+<span class="badge badge-important">Hack</span> At the moment mono's Visual Basic support is a bit dodgy, so we have to remove the mono example project from the solution file before we build. We can strip the project out of the solution file with `sed`:
 
-    grep --invert-match --perl-regexp "^\s*\{6984BCE9-" project/ccnet.sln > project/ccnet.sln.temp
-    mv project/ccnet.sln.temp project/ccnet.sln
+    sed --in-place '/^\s+{6984BCE9/d' project/ccnet.sln
 
 There's a handy shell script that wraps up the build process for you, so all you need to do now is run:
 
@@ -89,8 +88,7 @@ There are two parts (that I'm going to talk about) to CCNet: the server and the 
 
 <span class="badge badge-important">Hack</span> We use Log4Net for logging, by default using the `ColoredConsoleAppender`, which doesn't work on unix. We can switch to using the `ConsoleAppender` which does work:
 
-    sed 's/ColoredConsoleAppender/ConsoleAppender/' ccnet.exe.config > ccnet.exe.config.temp
-    mv ccnet.exe.config.temp ccnet.exe.config
+    sed --in-place 's/ColoredConsoleAppender/ConsoleAppender/' ccnet.exe.config
 
 It should then be possible to run the server with:
 
