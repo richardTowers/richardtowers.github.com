@@ -65,7 +65,7 @@ Building CCNet
 
 <span class="badge badge-important">Hack</span> At the moment mono's Visual Basic support is a bit dodgy, so we have to remove the mono example project from the solution file before we build. We can strip the project out of the solution file with `sed`:
 
-    sed --in-place '/^[[:space:]]+{6984BCE9/d' project/ccnet.sln
+    sed --in-place '/^\s*{6984BCE9/d' project/ccnet.sln
 
 There's a handy shell script that wraps up the build process for you, so all you need to do now is run:
 
