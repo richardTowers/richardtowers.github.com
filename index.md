@@ -3,7 +3,7 @@ layout: default
 title: Richard Towers
 ---
 
-<img alt="Me riding a surfboard int the wind on some sand" src="http://www.gravatar.com/avatar/49aaba480eb0629ee5a6ba72af5e89ff?s=160&amp;d=identicon&amp;r=PG" class="pull-right gravatar">
+<img alt="Me riding a surfboard in the wind on some sand" src="https://www.gravatar.com/avatar/49aaba480eb0629ee5a6ba72af5e89ff?s=160&amp;d=identicon&amp;r=PG" class="pull-right gravatar">
 
 Hi! I'm Richard.
 ===================

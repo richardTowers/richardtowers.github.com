@@ -14,7 +14,7 @@ projects:
     img: /img/riskViewer.png
   - title: Pole Balancer
     description: |
-      A little canvas game based on the classic <a href="http://anji.sourceforge.net/polebalance.htm">Pole Balancing</a> problem in control theory. The player has to write some JavaScript to sove the problem.
+      A little canvas game based on the classic <a href="https://anji.sourceforge.net/polebalance.htm">Pole Balancing</a> problem in control theory. The player has to write some JavaScript to sove the problem.
     url: /poleBalancer
     img: /img/poleBalancer.png
   - title: 5nake
