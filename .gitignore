@@ -1,9 +1,3 @@
 _site/
-
 .DS_Store
-
-.vagrant
-
-css/.DS_Store
-
-js/.DS_Store
+*.swp

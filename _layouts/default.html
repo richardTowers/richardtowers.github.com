@@ -1,72 +1,33 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="google-site-verification" content="JlPwGrV8ZduBoZKEJNVsEFCkLXIH-gkI6jzlBoNJOYE" />
-		<title>{{ page.title }}</title>
-		<link rel="stylesheet" href="/css/lib/bootstrap-cosmo.css" />
-		<link rel="stylesheet" href="/css/lib/bootstrap-responsive.min.css" />
-		<link rel="stylesheet" href="/css/site.css">
-		<link rel="stylesheet" href="/css/syntax.css">
-	</head>
-	<body>
-		<div class="navbar navbar-inverse navbar-fixed-top">
-			<div class="navbar-inner">
-				<a class="brand" href="/">Richard Towers</a>
-				<ul class="nav pull-right">
-					<li>
-				    <a href="https://www.facebook.com/RichardSebastianTowers">Facebook</a>
-				  </li>
-					<li>
-				    <a href="https://twitter.com/RichardTowers">Twitter</a>
-				  </li>
-				  <li>
-				    <a href="https://github.com/richardTowers">Github</a>
-				  </li>
-				</ul>
-			</div>
-		</div>
-		<div class="container-fluid">
-			<div class="row-fluid">
-				<div class="span9">{{ content }}</div>
-				<div class="span3">
-					<nav class="well sidebar-nav">
-						<ul class="nav nav-list">
-							<li class="nav-header">This Site</li>
-							<li><a href="/">Home</a></li>
-							<!--<li><a href="/projects">Projects</a></li>-->
-							<li class="nav-header">Posts</li>
-							{% for post in site.posts %}
-								<li><a href="{{ post.url }}">{{ post.title }}</a></li>
-							{% endfor %}
-						</ul>
-					</nav>
-					<div class="well sidebar-nav">
-						<ul class="nav nav-list">
-							<li class="nav-header">Projects I Find Interesting</li>
-							<li><a href="https://angularjs.org/">AngularJS</a></li>
-							<li><a href="https://twitter.github.com/bootstrap/">Bootstrap</a></li>
-							<li><a href="https://www.typescriptlang.org/">TypeScript</a></li>
-							<li><a href="https://msdn.microsoft.com/en-us/library/bb126445.aspx">T4</a></li>
-							<li class="nav-header">Comics I Enjoy</li>
-							<li><a href="https://xkcd.com/">XKCD</a></li>
-							<li><a href="https://www.asofterworld.com/">A Softer World</a></li>
-							<li><a href="https://www.explosm.net/comics">Cyanide and Happiness</a></li>
-							<li class="nav-header">Blogs I Read</li>
-							<li><a href="https://www.codinghorror.com/blog/">Coding Horror</a></li>
-							<li><a href="https://www.olegsych.com/">Oleg Sych</a></li>
-							<li><a href="https://paulirish.com/">Paul Irish</a></li>
-							<li><a href="https://www.hanselman.com/blog/">Scott Hanselman</a></li>
-							<li><a href="https://ericlippert.com/">Eric Lippert</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<footer>
-			Copyleft Richard Towers {{ site.time | date: "%Y" }}. All wrongs reserved.
-		</footer>
-		<script src="/js/lib/jquery-1.8.3.min.js"></script>
-		<script src="/js/lib/bootstrap.js"></script>
-	</body>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="google-site-verification" content="JlPwGrV8ZduBoZKEJNVsEFCkLXIH-gkI6jzlBoNJOYE" />
+    <title>{{ page.title }}</title>
+  </head>
+  <body>
+    <div>
+      <div>
+        <a href="/">Richard Towers</a>
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/RichardSebastianTowers">Facebook</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/RichardTowers">Twitter</a>
+          </li>
+          <li>
+            <a href="https://github.com/richardTowers">Github</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="container-fluid">
+      {{ content }}
+    </div>
+    <footer>
+      Copyleft Richard Towers {{ site.time | date: "%Y" }}. All wrongs reserved.
+    </footer>
+  </body>
 </html>
+
