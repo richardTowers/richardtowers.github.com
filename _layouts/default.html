@@ -1,30 +1,21 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-    <meta name="google-site-verification" content="JlPwGrV8ZduBoZKEJNVsEFCkLXIH-gkI6jzlBoNJOYE" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="JlPwGrV8ZduBoZKEJNVsEFCkLXIH-gkI6jzlBoNJOYE">
+    <link rel="stylesheet" href="/static/styles.css">
     <title>{{ page.title }}</title>
   </head>
   <body>
-    <div>
-      <div>
-        <a href="/">Richard Towers</a>
-        <ul>
-          <li>
-            <a href="https://www.facebook.com/RichardSebastianTowers">Facebook</a>
-          </li>
-          <li>
-            <a href="https://twitter.com/RichardTowers">Twitter</a>
-          </li>
-          <li>
-            <a href="https://github.com/richardTowers">Github</a>
-          </li>
-        </ul>
+    <div class="header">
+      <a href="/">Richard Towers</a>
+    </div>
+    <main>
+      <div class="content">
+        {{ content }}
       </div>
-    </div>
-    <div class="container-fluid">
-      {{ content }}
-    </div>
+    </main>
     <footer>
       Copyleft Richard Towers {{ site.time | date: "%Y" }}. All wrongs reserved.
     </footer>

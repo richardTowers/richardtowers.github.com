@@ -1,0 +1,48 @@
+/* Default styles */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+/* Layout */
+html,body {
+  margin: 0;
+  background-color: #dee0e2;
+}
+main {
+  padding-top: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 1rem;
+  background-color: #ffffff;
+  min-height: 550px;
+}
+
+/* Header */
+.header {
+  padding: 1rem;
+  color: #ffffff;
+  background-color: #000000;
+}
+.header a {
+  color: #ffffff;
+}
+/* Footer */
+footer {
+  border-top: 10px solid #d53880;
+  padding: 1rem;
+  color: #454a4c;
+  background-color: #dee0e2;
+}
+
+/* Posts */
+.post {
+  margin-left: 1rem;
+  border-left: 5px solid #cccccc;
+  padding-left: 1rem;
+}
