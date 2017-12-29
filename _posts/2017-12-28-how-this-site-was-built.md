@@ -110,8 +110,8 @@ Cloudflare which points at the IP addresses GitHub provides for Pages.
 Once all the DNS records have propagated visitors to
 `http://richard-towers.com` get the content from GitHub pages.
 
-Handle HTTPS connections
-------------------------
+Handling HTTPS connections
+--------------------------
 
 Websites on today's internet can chose to allow connections over HTTP and
 HTTPS. HTTPS websites use Transport Layer Security to protect the requests and
