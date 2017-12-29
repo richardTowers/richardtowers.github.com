@@ -3,9 +3,6 @@ layout: default
 title: Richard Towers
 ---
 
-Richard Towers
-==============
-
 I'm a software developer from York. As of 2018 I work at the
 [Government Digital Service](https://gds.blog.gov.uk/about/)
 in London.
