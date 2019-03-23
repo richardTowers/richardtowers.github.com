@@ -15,12 +15,18 @@ html,body {
   background-color: #dee0e2;
 }
 main {
+  background-color: #ffffff;
+  line-height: 1.5rem;
+}
+.content {
   padding-top: 1rem;
   padding-left: 3rem;
   padding-right: 3rem;
   padding-bottom: 1rem;
-  background-color: #ffffff;
   min-height: 550px;
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Header */
@@ -31,6 +37,10 @@ main {
 }
 .header a {
   color: #ffffff;
+  display: block;
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* Footer */
 footer {
