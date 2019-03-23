@@ -1,5 +1,5 @@
 safe:        false
-url: http://localhost:4000
+url: https://richard-towers.com
 
 source:      .
 destination: ./_site
