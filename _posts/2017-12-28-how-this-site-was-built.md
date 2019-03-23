@@ -1,16 +1,8 @@
 ---
 layout: post
 title: "How this site was built"
-summary: >
-  <p>How the content of this website made its way from my keyboard to your computer screen.</p>
-
-  <p>Including:
-    <ul>
-      <li>Hosting on GitHub Pages and Jekyll</li>
-      <li>Registering a domain name</li>
-      <li>Using Cloudflare to set up HTTPS</li>
-    </ul>
-  </p>
+excerpt: >
+  How the content of this website made its way from my keyboard to your computer screen.
 ---
 
 How this site was built

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "Old side projects"
-summary: >
-  <p>Some old side projects from when I was learning to code.</p>
+excerpt: >
+  Some old side projects from when I was learning to code.
 ---
 
 Old side projects

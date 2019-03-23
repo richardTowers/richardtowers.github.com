@@ -18,7 +18,7 @@ You can find me on the internet in these places:
 {% for post in site.posts %}
 	<div class="post">
 		<h3><a href="{{ post.url }}">{{post.title}}</a></h3>
-		{{ post.summary }}
+		{{ post.excerpt }}
 	</div>
 {% endfor %}
 </div>

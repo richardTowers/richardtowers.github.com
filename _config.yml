@@ -1,5 +1,7 @@
 safe:        false
 url: https://richard-towers.com
+title: richard-towers.com
+author: Richard Towers
 
 source:      .
 destination: ./_site
