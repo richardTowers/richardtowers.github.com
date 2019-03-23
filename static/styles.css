@@ -33,6 +33,22 @@ main {
   margin-right: auto;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+.content img {
+  max-width: 40rem;
+}
+
 /* Header */
 .header {
   padding: 1rem;
