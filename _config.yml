@@ -11,6 +11,9 @@ highlighter: rouge
 markdown:    kramdown
 permalink:   date
 
+plugins:
+  - jekyll-feed
+
 maruku:
   use_tex:    false
   use_divs:   false
