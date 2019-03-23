@@ -46,10 +46,11 @@ h3 {
 }
 
 .content img {
-  max-width: 40rem;
+  width: 40rem;
+  max-width: 100%;
 }
 
-.avatar {
+img.avatar {
   width: 10rem;
   border-radius: 5rem;
   float: right;
