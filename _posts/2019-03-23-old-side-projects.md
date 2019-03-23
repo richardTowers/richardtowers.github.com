@@ -2,7 +2,7 @@
 layout: post
 title: "Old side projects"
 excerpt: >
-  Some old side projects from when I was learning to code.
+  Looking back on some old side projects from when I was learning to code.
 ---
 
 Old side projects
