@@ -2,7 +2,7 @@
 layout: post
 title: "On software, magic, and diversity"
 excerpt: >
-  Long before people dreamed of computers, they dreamed of magic. Of names, of
+  Long before the invention of computers, people dreamed of magic. Of names, of
   power, of mastery over their world.
 
   Stories tell of men of power, of white wizards with flowing beards, casting
@@ -24,7 +24,7 @@ excerpt: >
 On software, magic, and diversity
 =================================
 
-Long before people dreamed of computers, they dreamed of magic. Of names, of
+Long before the invention of computers, people dreamed of magic. Of names, of
 power, of mastery over their world.
 
 Stories tell of men of power. Of white wizards with flowing beards, casting
