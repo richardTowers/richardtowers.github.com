@@ -7,8 +7,9 @@ title: Richard Towers
 
 I'm a software developer from York.
 
-As of 2019 I work on [GOV.UK PaaS](https://cloud.service.gov.uk) at the
-[Government Digital Service](https://gds.blog.gov.uk/about/) in London.
+As of 2020 I'm a lead developer on the [GOV.UK](https://www.gov.uk) publishing
+platform at the [Government Digital Service](https://gds.blog.gov.uk/about/) in
+London.
 
 I’m a keen (if not very strong) chess player, and a determined (if not very
 fast) cyclist. I can sail a bit too, so when the weather’s nice I like to do
