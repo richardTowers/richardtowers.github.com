@@ -8,6 +8,11 @@ a {
 a:hover {
   text-decoration: underline;
 }
+blockquote {
+  font-style: italic;
+  border-left: 4px solid lightgray;
+  padding-left: 6px;
+}
 
 /* Layout */
 html,body {
@@ -45,7 +50,7 @@ h3 {
   font-size: 1.1rem;
 }
 
-.content img {
+.content img,svg {
   width: 40rem;
   max-width: 100%;
 }
