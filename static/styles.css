@@ -116,3 +116,8 @@ aside {
   border-left: 4px solid lightgray;
   padding-left: 6px;
 }
+
+/* Code snippets */
+pre.highlight {
+  overflow: scroll;
+}
