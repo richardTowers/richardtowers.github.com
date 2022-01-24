@@ -6,11 +6,13 @@
     <meta name="google-site-verification" content="JlPwGrV8ZduBoZKEJNVsEFCkLXIH-gkI6jzlBoNJOYE">
     <link rel="stylesheet" href="/static/styles.css?no-cache">
     <link rel="stylesheet" href="/static/autumn.css?no-cache">
-    <meta name="twitter:card" content="summary" />
     <meta name="twitter:creator" content="@richardtowers" />
     <meta property="og:title" content="{{page.title}}">
     {% if page.image %}
+    <meta name="twitter:card" content="summary_large_image" />
     <meta property="og:image" content="{{page.image}}">
+    {% else %}
+    <meta name="twitter:card" content="summary" />
     {% endif %}
     {% if page.excerpt %}
     <meta property="og:description" content="Richard Towers | {{page.excerpt}}" />
