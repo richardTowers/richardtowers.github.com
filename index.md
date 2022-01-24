@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Richard Towers
+title: Home
 ---
 
 <img alt="Photograph of Richard sailing somewhere sunny" src="/static/images/richard-sailing.jpg" class="avatar">
