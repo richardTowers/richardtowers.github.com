@@ -6,6 +6,15 @@
     <meta name="google-site-verification" content="JlPwGrV8ZduBoZKEJNVsEFCkLXIH-gkI6jzlBoNJOYE">
     <link rel="stylesheet" href="/static/styles.css?no-cache">
     <link rel="stylesheet" href="/static/autumn.css?no-cache">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:creator" content="@richardtowers" />
+    <meta property="og:title" content="{{page.title}}">
+    {% if page.image %}
+    <meta property="og:image" content="{{page.image}}">
+    {% endif %}
+    {% if page.excerpt %}
+    <meta property="og:description" content="{{page.excerpt}}" />
+    {% endif %}
     <title>{{ page.title }}</title>
   </head>
   <body>
@@ -22,4 +31,3 @@
     </footer>
   </body>
 </html>
-
