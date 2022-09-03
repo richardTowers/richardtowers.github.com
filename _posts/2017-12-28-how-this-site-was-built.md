@@ -71,10 +71,6 @@ It's probably simplest to use your domain registrar's DNS service, but for my
 own learning and development [I've used AWS Route53 for my
 DNS](https://github.com/richardTowers/personal-aws/blob/main/richard-towers-com/route53.tf).
 
-An earlier version of this post recommended Cloudflare for this, but I no
-longer feel comfortable making that recommendation due to their sustained
-support for an anti-trans hate group in 2022.
-
 Handling HTTPS connections
 --------------------------
 
