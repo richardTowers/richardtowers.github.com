@@ -16,20 +16,20 @@ power on the internet from independent websites into the hands of these few,
 huge providers. There's good news though: the internet has grown up to the
 point where it's easy and cheap to host your own content. In this post I'm
 going to describe how I've set up
-[https://richard-towers.com](https://richard-towers.com)
+[https://www.richard-towers.com](https://www.richard-towers.com)
 and the trade-offs I've made.
 
 What do you need to do to host a site?
 --------------------------------------
 
 The goal of this website is that when someone visits
-[https://richard-towers.com](https://richard-towers.com)
+[https://www.richard-towers.com](https://www.richard-towers.com)
 in their browser they will be served the content I have written. To make that
 happen I needed to do the following things:
 
 * Register the domain name `richard-towers.com`
 * Set up DNS to to point requests for
-  `richard-towers.com` to a thing which will serve the content
+  `www.richard-towers.com` to a thing which will serve the content
 * Handle HTTPS connections
 * Serve HTML, CSS and JavaScript
 
@@ -57,8 +57,8 @@ servers for free. This service uses a tool called
 posts in [Markdown](https://daringfireball.net/projects/markdown/) and having
 them built into and delivered as HTML.
 
-You can set up a `CNAME` record from your own domain (`richard-towers.com` in
-this case).
+You can set up a `CNAME` record from your own domain (`www.richard-towers.com`
+in this case).
 
 Set up DNS
 ----------
@@ -67,34 +67,35 @@ The GitHub Pages documentation has
 [instructions for setting up a custom domain](https://help.github.com/articles/using-a-custom-domain-with-github-pages/).
 Long story short, tell GitHub about the domain and set up DNS records in your DNS provider.
 
-For `richard-towers.com` I'm using [Cloudflare](https://www.cloudflare.com/) as
-my DNS provider. In most situations your domain registrar will offer DNS
-provisions for you, but these can sometimes be slow or unreliable. Cloudflare's
-free DNS offering is very good and their service provides some nice features on
-top of just DNS.
+It's probably simplest to use your domain registrar's DNS service, but for my
+own learning and development [I've used AWS Route53 for my
+DNS](https://github.com/richardTowers/personal-aws/blob/main/richard-towers-com/route53.tf).
 
-I've configured the domain in Namecheap to point `richard-towers.com` at
-Cloudflare's nameservers. Then there's an A record configured in DNS in
-Cloudflare which points at the IP addresses GitHub provides for Pages.
+An earlier version of this post recommended Cloudflare for this, but I no
+longer feel comfortable making that recommendation due to their sustained
+support for an anti-trans hate group in 2022.
 
 Handling HTTPS connections
 --------------------------
 
-Cloudflare have a service which provides free managed TLS.
-
-In the "Full SSL" mode of operation connections between users' browsers and
-Cloudflare's servers go over TLS, and connections between Cloudflare's servers
-and GitHub Pages go over a separate TLS connection.
-
-This means Cloudflare are in a position where they could intercept or modify
-traffic. Since this is just a blog that's a worthwhile trade-off for the
-convenience.
+GitHub Pages [supports HTTPS out of the
+box](https://docs.github.com/en/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https)
+these days. If you're using Pages, all you need to do is set a CNAME record
+pointing at GitHub and they'll do the rest.
 
 Summary
 -------
 
-Using free services from GitHub and Cloudflare you can host a website over
-HTTPS for free.
+Using free services from GitHub you can host a website over HTTPS for free.
 
 There are lots of other ways to run a website, but this is pretty convenient.
+
+Edit History
+------------
+
+* September 2022 - removed recommendation of Cloudflare for DNS and HTTPS.
+  Their continued provision (as of September 2022) of service to anti-trans
+  hate groups means they're not an organisation I want my personal website
+  associated with. In any case, their service is no longer required now that
+  GitHub Pages supports HTTPS out of the box.
 
