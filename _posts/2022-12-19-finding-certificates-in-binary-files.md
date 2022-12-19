@@ -186,7 +186,7 @@ file.
 If the certificate were base64 encoded instead of hex encoded, you could use
 the same trick with the pattern `/MI....CC/` (or something like that).
 
-## Bonus: PKCS7 and parsing ANS.1 with openssl
+## Bonus: PKCS7 and parsing ASN.1 with openssl
 
 After I'd worked all of this out, I realised that the whole
 `Contents<30800609288...>` string was itself in ASN.1 format, specifically
