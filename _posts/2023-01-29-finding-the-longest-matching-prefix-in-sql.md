@@ -2,6 +2,7 @@
 layout: post
 title: "Finding the longest matching prefix in SQL"
 excerpt: "How to efficiently find the longest matching prefix of some string in SQL, and the dangers of stackexchange"
+image: /static/images/simon-wilkes-S297j2CsdlM-unsplash.jpg
 ---
 
 # Finding the longest matching prefix in SQL
