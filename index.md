@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-<img alt="Photograph of Richard sailing somewhere sunny" src="/static/images/richard-sailing.jpg" class="avatar">
+<img alt="Photograph of Richard sailing somewhere sunny" src="/static/images/richard-sailing.jpg" class="avatar" width="160" height="160">
 
 I'm a software developer from York.
 

@@ -29,7 +29,7 @@ fast, it can be slowed down with a well timed kick off the dock.
 
 
 <figure>
-  <img class="fixed-width-20" alt="A small boat sailing off the coast of the Isle of Wight in very light winds." src="/static/images/island-sailing-club-sonar.jpg">
+  <img class="fixed-width-20" alt="A small boat sailing off the coast of the Isle of Wight in very light winds." src="/static/images/island-sailing-club-sonar.jpg" width="320" height="427">
   <figcaption>A small boat sailing off the coast of the Isle of Wight in very light winds.</figcaption>
 </figure>
 
@@ -70,7 +70,7 @@ Instead, I need to be looking for the small adjustments and careful
 interventions that let the team cut cleanly through the waves.
 
 <figure>
-  <img alt="The 90 foot, 96 ton sailing boat &quot;AWOL again&quot;, arriving in Gibraltar after an Atlantic crossing" src="/static/images/awol-again-arrives-gibraltar.jpg">
+  <img alt="The 90 foot, 96 ton sailing boat &quot;AWOL again&quot;, arriving in Gibraltar after an Atlantic crossing" src="/static/images/awol-again-arrives-gibraltar.jpg" width="603" height="450">
   <figcaption>The 90 foot, 96 ton sailing boat &quot;AWOL again&quot;, which was the first &quot;big&quot; boat I sailed on, arriving in Gibraltar after an Atlantic crossing. Trying to slow this thing down by pushing it was an extremely silly mistake. Fortunately I managed not to injure myself.</figcaption>
 </figure>
 
