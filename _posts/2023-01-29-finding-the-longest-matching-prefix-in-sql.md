@@ -11,7 +11,7 @@ image: /static/images/simon-wilkes-S297j2CsdlM-unsplash.jpg
 
   
 <figure>
-  <img class="fixed-width-20" alt="Photograph of a large deciduous tree in Richmond Park. The photographer, Simon Wilkes, commented: Perhaps one the best vantage points in Richmond Park, London. This bench is perfectly placed beneath a lonely tree, giving a clear view of the open fields and woodlands in every direction. In the early morning mist there’s a certain melancholy about the place - you could sit and ponder life here, without a care in the world." src="/static/images/simon-wilkes-S297j2CsdlM-unsplash.jpg" width="320" height="213">
+  <img class="fixed-width-20" alt="Photograph of a large deciduous tree in Richmond Park. The photographer, Simon Wilkes, commented: Perhaps one the best vantage points in Richmond Park, London. This bench is perfectly placed beneath a lonely tree, giving a clear view of the open fields and woodlands in every direction. In the early morning mist there’s a certain melancholy about the place - you could sit and ponder life here, without a care in the world." src="/static/images/simon-wilkes-S297j2CsdlM-unsplash.jpg" width="320" style="aspect-ratio: 3/2;">
   <figcaption>Photo by <a href="https://unsplash.com/@simonfromengland?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Simon Wilkes</a> on <a href="https://unsplash.com/images/nature/tree?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 </figcaption>
 </figure>
