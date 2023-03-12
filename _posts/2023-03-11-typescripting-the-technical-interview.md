@@ -346,3 +346,7 @@ var ᛞ = Symbol();
 ```
 
 Criss looks like he's been slapped. You leave him to it and show yourself out.
+
+-------
+
+[Discuss this post on Mastodon](https://hachyderm.io/@richardTowers/110010654345838168)
