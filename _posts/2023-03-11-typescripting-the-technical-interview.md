@@ -93,19 +93,6 @@ type Cons<x, xs> = [x, xs]
 
 You hear Criss' breath catch. Quickly, before he can escape.
 
-"So, we've got a list which we'll use to store our queens. We'll need to be able
-to glue lists together, so let's start with a concat function."
-
-```typescript
-type Concat<seq1, seq2> = seq1 extends Nil
-    ? seq2
-    : seq1 extends Cons<infer car, infer cdr>
-        ? Cons<car, Concat<cdr, seq2>>
-        : Cons<seq1, seq2>
-```
-
-"No" Criss whispers under his breath, "not again".
-
 "Let's do booleans, to represent threat and safety"
 
 Truth, fire, a sun. Bound with ᛊ. <br />
@@ -282,7 +269,9 @@ type SolveNextRow<row, placedQueens> =
     Solve<Next<S<row>, placedQueens>, S<row>, placedQueens>
 
 type Solve<candidates, row, placedQueens> = Equals<row, N> extends True
-    ? Concat<candidates, placedQueens>
+    ? candidates extends Cons<infer x, any>
+        ? Cons<x, placedQueens>
+        : Nil
     : candidates extends Cons<infer x, infer xs>
         ? SolveNextRow<row, Cons<x, placedQueens>> extends Nil
             ? Solve<xs, row, placedQueens>
@@ -314,6 +303,7 @@ Cons<
       Queen<S<typeof ᛞ>, Two>,
       Cons<
        Queen<typeof ᛞ, typeof ᛞ>,
+       Nil
       >
      >
     >
@@ -350,3 +340,8 @@ Criss looks like he's been slapped. You leave him to it and show yourself out.
 -------
 
 [Discuss this post on Mastodon](https://hachyderm.io/@richardTowers/110010654345838168)
+
+## Errata
+
+- 2023-03-13 - There was a bug in the base case of the Solve "function", pointed out by [jtinder on Hacker news](https://news.ycombinator.com/item?id=35134174).
+- 2023-03-13 - The solution was missing a trailing `Nil`, pointed out by [@gholk on Mastodon](https://g0v.social/@gholk/110016933349353417)
