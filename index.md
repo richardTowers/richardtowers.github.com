@@ -7,9 +7,9 @@ title: Home
 
 I'm a software developer from York.
 
-As of 2022 I'm the (interim) Head of Software Engineering for the
-[GOV.UK](https://www.gov.uk) website and publishing platform at the [Government
-Digital Service](https://gds.blog.gov.uk/about/) in London.
+As of 2023 I'm a Lead Developer working on the [GOV.UK](https://www.gov.uk)
+publishing platform at the [Government Digital
+Service](https://gds.blog.gov.uk/about/) in London.
 
 I’m a keen (if not very strong) chess player, and a determined (if not very
 fast) cyclist. I can sail a bit too, so when the weather’s nice I like to do
