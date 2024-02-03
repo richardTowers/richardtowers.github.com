@@ -7,7 +7,7 @@ title: Home
 
 I'm a software developer from York.
 
-As of 2023 I'm a Lead Developer working on the [GOV.UK](https://www.gov.uk)
+As of 2024 I'm a Lead Developer working on the [GOV.UK](https://www.gov.uk)
 publishing platform at the [Government Digital
 Service](https://gds.blog.gov.uk/about/) in London.
 
