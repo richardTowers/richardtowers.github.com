@@ -80,7 +80,7 @@ Now we can create the CTE, which names itself `t(n)`, and is a `UNION ALL` betwe
 ```ruby
 cte_definition = Arel::Nodes::Cte.new(
   Arel.sql("t(n)"),
-  Arel::Nodes::Union.new(base_case, recursive_case),
+  Arel::Nodes::UnionAll.new(base_case, recursive_case),
 )
 ```
 
@@ -98,7 +98,7 @@ cte = cte_table.project(cte_table[:n].sum).with(:recursive, cte_definition)
 Calling `cte.to_sql` gives us (almost) the exact SQL we wanted:
 
 ```sql
-WITH RECURSIVE t(n) AS ( VALUES (1) UNION (SELECT ("t"."n" + 1) FROM "t" WHERE "t"."n" < 100) ) SELECT SUM("t"."n") FROM "t"
+WITH RECURSIVE t(n) AS ( VALUES (1) UNION ALL (SELECT ("t"."n" + 1) FROM "t" WHERE "t"."n" < 100) ) SELECT SUM("t"."n") FROM "t"
 ```
 
 And running this against a Postgresql database with ActiveRecord:
