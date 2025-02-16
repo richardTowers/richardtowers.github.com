@@ -6,6 +6,53 @@ excerpt: "Using ActiveRecord / Arel to write the example recursive CTE from the 
 
 # Recursive CTEs in ActiveRecord
 
+## Update 2025
+
+[As of Rails 7.2](https://github.com/rails/rails/blob/7-2-stable/activerecord/CHANGELOG.md) ActiveRecord has
+support for recursive CTEs built in (thanks to ClearlyClaire).
+
+It would still be a bit of a faff to construct the exact SQL from the postgres docs
+using Arel (as this blog post does), but roughly you could do:
+
+```ruby
+class T < ActiveRecord::Base
+  def self.table_name = "t"
+end
+
+ActiveRecord::Base.connection.execute(
+  T.with_recursive(
+    Arel.sql("t(n)") => [
+      Arel.sql("VALUES (1)"),
+      Arel.sql("SELECT n+1 FROM t WHERE n < 100")
+    ]
+  ).to_sql
+)
+```
+
+The example from the changelog is probably better:
+
+```ruby
+Post.with_recursive(
+  post_and_replies: [
+    Post.where(id: 42),
+    Post.joins('JOIN post_and_replies ON posts.in_reply_to_id = post_and_replies.id'),
+  ]
+)
+```
+
+Generates the following SQL:
+
+```sql
+WITH RECURSIVE "post_and_replies" AS (
+  (SELECT "posts".* FROM "posts" WHERE "posts"."id" = 42)
+  UNION ALL
+  (SELECT "posts".* FROM "posts" JOIN post_and_replies ON posts.in_reply_to_id = post_and_replies.id)
+)
+SELECT "posts".* FROM "posts"
+```
+
+## Original post
+
 [ActiveRecord](https://guides.rubyonrails.org/active_record_basics.html) is the
 Object Relational Mapper (ORM) in Rails which lets you interact with the database.
 
