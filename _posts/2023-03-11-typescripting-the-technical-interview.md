@@ -2,7 +2,7 @@
 layout: post
 title: "Typescripting the technical interview"
 excerpt: "An homage to Aphyr's Typing the technical interview"
-image: /static/images/7-queens-solution.png
+image: /static/images/8-queens-solution.png
 ---
 
 # Typescripting the technical interview
@@ -141,6 +141,8 @@ type Three = S<Two>
 type Four  = S<Three>
 type Five  = S<Four>
 type Six   = S<Five>
+type Seven = S<Six>
+type Eight = S<Seven>
 ```
 
 Criss is completely grey now. His breath begins to cloud, as the chill in the air intensifies. He knows what's coming.
@@ -282,7 +284,7 @@ type Solve<candidates, row, placedQueens> = Equals<row, N> extends True
 "Criss" you say gently "the solution"
 
 ```typescript
-type N = Six
+type N = Eight
 type Solution = Solve<Next<Zero>, Zero, Nil>
 ```
 
@@ -290,34 +292,39 @@ A mouse flits across the Solution, and the language server renders:
 
 ```typescript
 Cons<
- Queen<S<S<S<S<S<S<typeof ᛞ>>>>>>, Five>,
- Cons<
-  Queen<S<S<S<S<S<typeof ᛞ>>>>>, Three>,
+  Queen<S<S<S<S<S<S<S<S<ᛞ>>>>>>>>, Four>,
   Cons<
-   Queen<S<S<S<S<typeof ᛞ>>>>, One>,
-   Cons<
-    Queen<S<S<S<typeof ᛞ>>>, Six>,
+    Queen<S<S<S<S<S<S<S<ᛞ>>>>>>>, Six>,
     Cons<
-     Queen<S<S<typeof ᛞ>>, Four>,
-     Cons<
-      Queen<S<typeof ᛞ>, Two>,
+      Queen<S<S<S<S<S<S<ᛞ>>>>>>, Eight>,
       Cons<
-       Queen<typeof ᛞ, typeof ᛞ>,
-       Nil
+        Queen<S<S<S<S<S<ᛞ>>>>>, Three>,
+        Cons<
+          Queen<S<S<S<S<ᛞ>>>>, One>,
+          Cons<
+            Queen<S<S<S<ᛞ>>>, Seven>,
+            Cons<
+              Queen<S<S<ᛞ>>, Five>,
+              Cons<
+                Queen<S<ᛞ>, Two>,
+                Cons<
+                  Queen<ᛞ, unique symbol>,
+                  ᛞ>
+                >
+              >
+            >
+          >
+        >
       >
-     >
     >
-   >
   >
- >
->
 ```
 
 "So that's queens at (0,0), (1,2), (2,4), (3,6), (4,1), (5,3) and (6,5). Does that work Criss?"
 
 You sketch the solution on the whiteboard.
 
-![A 7 by 7 chess board, showing 7 queens placed in positions where they don't threaten each other. Queens are in (0,0), (1,2), (2,4), (3,6), (4,1), (5,3) and (6,5)](/static/images/7-queens-solution.png)
+![A chess board, showing 8 queens placed in positions where they don't threaten each other. Queens are in a4, b1, c5, d8, e2, f7, g3, and h6.](/static/images/8-queens-solution.png)
 
 As warmth begins to return to the room, Criss starts to recover.
 
@@ -348,3 +355,4 @@ Criss looks like he's been slapped. You leave him to it and show yourself out.
 
 - 2023-03-13 - There was a bug in the base case of the Solve "function", pointed out by [jtinder on Hacker news](https://news.ycombinator.com/item?id=35134174).
 - 2023-03-13 - The solution was missing a trailing `Nil`, pointed out by [@gholk on Mastodon](https://g0v.social/@gholk/110016933349353417)
+- 2025-05-23 - An earlier version of this post stopped at a 7x7 chessboard, because of recursion limits in the TypeScript compiler. The new Go implementation of the typescript compiler has a much deeper limit though, and the solution works up to a 10x10 chessboard now. Updated the post to an 8x8 because that's the classic.
