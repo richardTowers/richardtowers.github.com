@@ -2,7 +2,7 @@
 layout: post
 title: "Typescripting the technical interview"
 excerpt: "An homage to Aphyr's Typing the technical interview"
-image: /static/images/8-queens-solution.png
+image: /static/images/8-queens-solution.gif
 ---
 
 # Typescripting the technical interview
@@ -284,7 +284,8 @@ type Solve<candidates, row, placedQueens> = Equals<row, N> extends True
 "Criss" you say gently "the solution"
 
 ```typescript
-type N = Eight
+// We get one queen for free at Zero, so:
+type N = Seven
 type Solution = Solve<Next<Zero>, Zero, Nil>
 ```
 
@@ -292,25 +293,21 @@ A mouse flits across the Solution, and the language server renders:
 
 ```typescript
 Cons<
-  Queen<S<S<S<S<S<S<S<S<ᛞ>>>>>>>>, Four>,
+  Queen<S<S<S<S<S<S<S<unique symbol>>>>>>>, Three>,
   Cons<
-    Queen<S<S<S<S<S<S<S<ᛞ>>>>>>>, Six>,
+    Queen<S<S<S<S<S<S<unique symbol>>>>>>, One>,
     Cons<
-      Queen<S<S<S<S<S<S<ᛞ>>>>>>, Eight>,
+      Queen<S<S<S<S<S<unique symbol>>>>>, Six>,
       Cons<
-        Queen<S<S<S<S<S<ᛞ>>>>>, Three>,
+        Queen<S<S<S<S<unique symbol>>>>, Two>,
         Cons<
-          Queen<S<S<S<S<ᛞ>>>>, One>,
+          Queen<S<S<S<unique symbol>>>, Five>,
           Cons<
-            Queen<S<S<S<ᛞ>>>, Seven>,
+            Queen<S<S<unique symbol>>, Seven>,
             Cons<
-              Queen<S<S<ᛞ>>, Five>,
+              Queen<S<unique symbol>, Four>,
               Cons<
-                Queen<S<ᛞ>, Two>,
-                Cons<
-                  Queen<ᛞ, ᛞ>,
-                  ᛞ>
-                >
+                Queen<unique symbol, unique symbol>, unique symbol>
               >
             >
           >
@@ -320,11 +317,11 @@ Cons<
   >
 ```
 
-"So that's queens at (0,0), (1,2), (2,4), (3,6), (4,1), (5,3) and (6,5). Does that work Criss?"
+"Our chessboard is one indexed, not zero indexed, so that's queens at a1, b5, c8, d6, e3, f7, g2, and h4. Does that work Criss?"
 
 You sketch the solution on the whiteboard.
 
-![A chess board, showing 8 queens placed in positions where they don't threaten each other. Queens are in a4, b1, c5, d8, e2, f7, g3, and h6.](/static/images/8-queens-solution.png)
+![A chess board, showing 8 queens placed in positions where they don't threaten each other. Queens are in a1, b5, c8, d6, e3, f7, g2, and h4.](/static/images/8-queens-solution.gif)
 
 As warmth begins to return to the room, Criss starts to recover.
 
