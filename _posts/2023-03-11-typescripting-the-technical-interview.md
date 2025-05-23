@@ -308,7 +308,7 @@ Cons<
               Cons<
                 Queen<S<ᛞ>, Two>,
                 Cons<
-                  Queen<ᛞ, unique symbol>,
+                  Queen<ᛞ, ᛞ>,
                   ᛞ>
                 >
               >
