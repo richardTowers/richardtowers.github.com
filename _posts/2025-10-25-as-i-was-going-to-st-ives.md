@@ -133,7 +133,10 @@ from kit_cats;
 ```sql
 select count(*)
 from relationships
-join characters place on relationships.target = place.id and relationship = 'Going to' and place.name='St Ives'
+join characters place
+  on relationships.target = place.id
+  and relationship = 'Going to'
+  and place.name='St Ives'
 join characters on relationships.source = characters.id
 where characters.type in ('Kit', 'Cat', 'Sack', 'Wife');
 
