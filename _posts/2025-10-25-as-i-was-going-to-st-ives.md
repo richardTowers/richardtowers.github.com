@@ -2,9 +2,17 @@
 layout: post
 title: "As I was going to St Ives..."
 excerpt: "I met a man with seven wives..."
+image: /static/images/St_Nicholas-V40-P2-164.jpg
 ---
 
 # As I was going to St Ives...
+
+
+<figure>
+<img class="fixed-width-20" alt="Image from 'The Rhymes of Mother Goose' in St. Nicholas, Volume 40. A smartly dressed bespectacled man holds his hands up in surprise as at least 8 wives in tall hats and innumerable sacks, cats and kits crowd the background." src="/static/images/St_Nicholas-V40-P2-164.jpg" width="320" style="aspect-ratio: 460 / 599;">
+<figcaption>William Fayal Clarke, Public domain, via <a href="https://commons.wikimedia.org/wiki/File:St_Nicholas-V40-P2-164.jpg">Wikimedia Commons</a></figcaption>
+</figure>
+
 
 ## Prelude
 
