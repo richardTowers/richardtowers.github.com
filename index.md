@@ -7,13 +7,14 @@ title: Home
 
 I'm a software developer from York.
 
-As of 2024 I'm a Lead Developer working on the [GOV.UK](https://www.gov.uk)
-publishing platform at the [Government Digital
-Service](https://gds.blog.gov.uk/about/) in London.
+As of 2026 I'm taking a break and pursuing my own projects. For the preceding
+decade I wrote software and managed people at the [Government Digital
+Service](https://gds.blog.gov.uk/about/), including a little over a year as the
+Head of Software Engineering for [GOV.UK](https://www.gov.uk).
 
 I’m a keen (if not very strong) chess player, and a determined (if not very
-fast) cyclist. I can sail a bit too, so when the weather’s nice I like to do
-that.
+fast) cyclist and runner. I can sail a bit too, so when the weather’s nice I
+like to do that.
 
 ## Elsewhere on the internet
 
