@@ -42,45 +42,45 @@
     --color-footer-text: #505a5f;
 
     /* Code blocks */
-    --color-code-bg: #f8f8f8;
-    --color-code-border: #d9dbdc;
-    --color-code-text: #0b0c0c;
+    --color-code-bg: #f5f5f5;
+    --color-code-border: #e0e0e0;
+    --color-code-text: #000000;
 
     /* Inline code */
-    --color-inline-code-bg: #f3f2f1;
+    --color-inline-code-bg: #f5f5f5;
 
-    /* Syntax highlighting — light (autumn-inspired) */
-    --syn-comment: #808080;
-    --syn-comment-preproc: #4c8317;
-    --syn-keyword: #0000aa;
-    --syn-keyword-type: #005f5f;
-    --syn-string: #aa5500;
-    --syn-number: #008080;
-    --syn-name-attr: #1e90ff;
-    --syn-name-builtin: #005f5f;
-    --syn-name-class: #00aa00;
-    --syn-name-const: #aa0000;
-    --syn-name-decorator: #888888;
+    /* Syntax highlighting — light (VS Code Light+ inspired) */
+    --syn-comment: #008000;
+    --syn-comment-preproc: #795e26;
+    --syn-keyword: #0000ff;
+    --syn-keyword-type: #267f99;
+    --syn-string: #a31515;
+    --syn-number: #098658;
+    --syn-name-attr: #e50000;
+    --syn-name-builtin: #267f99;
+    --syn-name-class: #267f99;
+    --syn-name-const: #0070c1;
+    --syn-name-decorator: #795e26;
     --syn-name-entity: #800000;
-    --syn-name-function: #00aa00;
-    --syn-name-namespace: #005f5f;
-    --syn-name-tag: #1e90ff;
-    --syn-name-variable: #aa0000;
-    --syn-operator: #0000aa;
-    --syn-error: #f00000;
-    --syn-error-bg: #f0a0a0;
-    --syn-generic-deleted: #aa0000;
-    --syn-generic-error: #aa0000;
-    --syn-generic-heading: #000080;
-    --syn-generic-inserted: #00aa00;
-    --syn-generic-output: #888888;
-    --syn-generic-prompt: #555555;
+    --syn-name-function: #795e26;
+    --syn-name-namespace: #267f99;
+    --syn-name-tag: #800000;
+    --syn-name-variable: #001080;
+    --syn-operator: #000000;
+    --syn-error: #e51400;
+    --syn-error-bg: #fce4ec;
+    --syn-generic-deleted: #a31515;
+    --syn-generic-error: #e51400;
+    --syn-generic-heading: #800000;
+    --syn-generic-inserted: #098658;
+    --syn-generic-output: #808080;
+    --syn-generic-prompt: #800080;
     --syn-generic-subhead: #800080;
-    --syn-generic-traceback: #aa0000;
-    --syn-regex: #008080;
-    --syn-string-symbol: #0000aa;
+    --syn-generic-traceback: #a31515;
+    --syn-regex: #811f3f;
+    --syn-string-symbol: #0070c1;
     --syn-whitespace: #bbbbbb;
-    --syn-highlight-line: #ffffcc;
+    --syn-highlight-line: #fff9c4;
 
     /* Typography */
     --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
@@ -115,44 +115,44 @@
       --color-footer-bg: #1a1a1a;
       --color-footer-text: #a0a0a0;
 
-      --color-code-bg: #2a2a2a;
-      --color-code-border: #3a3a3a;
-      --color-code-text: #e0e0e0;
+      --color-code-bg: #1e1e1e;
+      --color-code-border: #3c3c3c;
+      --color-code-text: #d4d4d4;
 
-      --color-inline-code-bg: #2a2a2a;
+      --color-inline-code-bg: #2d2d2d;
 
-      /* Syntax highlighting — dark (fruity-inspired) */
-      --syn-comment: #75a060;
-      --syn-comment-preproc: #ff6666;
-      --syn-keyword: #fb660a;
-      --syn-keyword-type: #cdcaa9;
-      --syn-string: #0086d2;
-      --syn-number: #0086f7;
-      --syn-name-attr: #ff0086;
-      --syn-name-builtin: #e0e0e0;
-      --syn-name-class: #e0e0e0;
-      --syn-name-const: #0086d2;
-      --syn-name-decorator: #e0e0e0;
-      --syn-name-entity: #e0e0e0;
-      --syn-name-function: #ff0086;
-      --syn-name-namespace: #e0e0e0;
-      --syn-name-tag: #fb660a;
-      --syn-name-variable: #fb660a;
-      --syn-operator: #e0e0e0;
-      --syn-error: #ffffff;
+      /* Syntax highlighting — dark (VS Code Dark+ inspired) */
+      --syn-comment: #6a9955;
+      --syn-comment-preproc: #c586c0;
+      --syn-keyword: #569cd6;
+      --syn-keyword-type: #4ec9b0;
+      --syn-string: #ce9178;
+      --syn-number: #b5cea8;
+      --syn-name-attr: #9cdcfe;
+      --syn-name-builtin: #4ec9b0;
+      --syn-name-class: #4ec9b0;
+      --syn-name-const: #4fc1ff;
+      --syn-name-decorator: #dcdcaa;
+      --syn-name-entity: #d4d4d4;
+      --syn-name-function: #dcdcaa;
+      --syn-name-namespace: #4ec9b0;
+      --syn-name-tag: #569cd6;
+      --syn-name-variable: #9cdcfe;
+      --syn-operator: #d4d4d4;
+      --syn-error: #f44747;
       --syn-error-bg: transparent;
-      --syn-generic-deleted: #e0e0e0;
-      --syn-generic-error: #e0e0e0;
-      --syn-generic-heading: #ffffff;
-      --syn-generic-inserted: #e0e0e0;
-      --syn-generic-output: #444444;
-      --syn-generic-prompt: #e0e0e0;
-      --syn-generic-subhead: #ffffff;
-      --syn-generic-traceback: #e0e0e0;
-      --syn-regex: #0086d2;
-      --syn-string-symbol: #0086d2;
-      --syn-whitespace: #888888;
-      --syn-highlight-line: #333333;
+      --syn-generic-deleted: #ce9178;
+      --syn-generic-error: #f44747;
+      --syn-generic-heading: #569cd6;
+      --syn-generic-inserted: #b5cea8;
+      --syn-generic-output: #808080;
+      --syn-generic-prompt: #c586c0;
+      --syn-generic-subhead: #569cd6;
+      --syn-generic-traceback: #f44747;
+      --syn-regex: #d16969;
+      --syn-string-symbol: #4fc1ff;
+      --syn-whitespace: #808080;
+      --syn-highlight-line: #264f78;
     }
   }
 }
@@ -210,7 +210,7 @@
 
   code {
     font-family: var(--font-mono);
-    font-size: 0.9em;
+    font-size: 0.85em;
     background: var(--color-inline-code-bg);
     padding: 0.15em 0.35em;
     border-radius: 3px;
@@ -218,7 +218,7 @@
 
   pre {
     font-family: var(--font-mono);
-    font-size: 0.85em;
+    font-size: 0.8em;
     line-height: 1.45;
   }
 
@@ -381,7 +381,6 @@
 
   .highlight .c {
     color: var(--syn-comment);
-    font-style: italic;
   }
 
   /* Comment */
@@ -399,7 +398,6 @@
   /* Keyword */
   .highlight .cm {
     color: var(--syn-comment);
-    font-style: italic;
   }
 
   /* Comment.Multiline */
@@ -411,13 +409,11 @@
   /* Comment.Preproc */
   .highlight .c1 {
     color: var(--syn-comment);
-    font-style: italic;
   }
 
   /* Comment.Single */
   .highlight .cs {
     color: var(--syn-keyword);
-    font-style: italic;
   }
 
   /* Comment.Special */
