@@ -12,6 +12,7 @@ lsi:         false
 highlighter: rouge
 markdown:    kramdown
 permalink:   date
+theme:       null
 
 plugins:
   - jekyll-feed

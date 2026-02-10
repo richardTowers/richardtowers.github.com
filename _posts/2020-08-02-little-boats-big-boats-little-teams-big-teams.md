@@ -70,7 +70,7 @@ Instead, I need to be looking for the small adjustments and careful
 interventions that let the team cut cleanly through the waves.
 
 <figure>
-  <img alt="The 90 foot, 96 ton sailing boat &quot;AWOL again&quot;, arriving in Gibraltar after an Atlantic crossing" src="/static/images/awol-again-arrives-gibraltar.jpg" width="603" style="aspect-ratio: 3/4;">
+  <img alt="The 90 foot, 96 ton sailing boat &quot;AWOL again&quot;, arriving in Gibraltar after an Atlantic crossing" src="/static/images/awol-again-arrives-gibraltar.jpg" width="604" height="451">
   <figcaption>The 90 foot, 96 ton sailing boat &quot;AWOL again&quot;, which was the first &quot;big&quot; boat I sailed on, arriving in Gibraltar after an Atlantic crossing. Trying to slow this thing down by pushing it was an extremely silly mistake. Fortunately I managed not to injure myself.</figcaption>
 </figure>
 

@@ -1,132 +1,701 @@
-/* Default styles */
-body {
-  font-family: Helvetica, Arial, sans-serif;
-}
-a {
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
-blockquote {
-  font-style: italic;
-  border-left: 4px solid lightgray;
-  padding-left: 6px;
-}
+@layer reset, tokens, base, layout, components, syntax, utilities;
 
-/* Layout */
-html,body {
-  margin: 0;
-  background-color: #dee0e2;
-}
-main {
-  background-color: #ffffff;
-  font-size: 1.2rem;
-  line-height: 1.3;
-}
-.content {
+/* ================================================================
+   Reset
+   ================================================================ */
+@layer reset {
 
-  padding-top: 1rem;
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding-bottom: 1rem;
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
 
-  min-height: 700px;
-
-  max-width: 60rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-@media only screen and (max-width : 768px) {
-  .content {
-    padding-left: 1rem;
-    padding-right: 1rem;
+  html,
+  body {
+    margin: 0;
+    padding: 0;
   }
 }
 
-h1 {
-  font-size: 2rem;
+/* ================================================================
+   Design tokens — light (default) and dark via prefers-color-scheme
+   ================================================================ */
+@layer tokens {
+  :root {
+    /* Page chrome */
+    --color-bg: #dee0e2;
+    --color-surface: #ffffff;
+    --color-text: #0b0c0c;
+    --color-text-muted: #505a5f;
+    --color-link: #1d70b8;
+    --color-link-hover: #003078;
+    --color-link-visited: #4c2c92;
+    --color-border: #b1b4b6;
+    --color-border-light: #d9dbdc;
+    --color-accent: #d53880;
+
+    /* Header / footer */
+    --color-header-bg: #0b0c0c;
+    --color-header-text: #ffffff;
+    --color-footer-bg: #dee0e2;
+    --color-footer-text: #505a5f;
+
+    /* Code blocks */
+    --color-code-bg: #f8f8f8;
+    --color-code-border: #d9dbdc;
+    --color-code-text: #0b0c0c;
+
+    /* Inline code */
+    --color-inline-code-bg: #f3f2f1;
+
+    /* Syntax highlighting — light (autumn-inspired) */
+    --syn-comment: #808080;
+    --syn-comment-preproc: #4c8317;
+    --syn-keyword: #0000aa;
+    --syn-keyword-type: #005f5f;
+    --syn-string: #aa5500;
+    --syn-number: #008080;
+    --syn-name-attr: #1e90ff;
+    --syn-name-builtin: #005f5f;
+    --syn-name-class: #00aa00;
+    --syn-name-const: #aa0000;
+    --syn-name-decorator: #888888;
+    --syn-name-entity: #800000;
+    --syn-name-function: #00aa00;
+    --syn-name-namespace: #005f5f;
+    --syn-name-tag: #1e90ff;
+    --syn-name-variable: #aa0000;
+    --syn-operator: #0000aa;
+    --syn-error: #f00000;
+    --syn-error-bg: #f0a0a0;
+    --syn-generic-deleted: #aa0000;
+    --syn-generic-error: #aa0000;
+    --syn-generic-heading: #000080;
+    --syn-generic-inserted: #00aa00;
+    --syn-generic-output: #888888;
+    --syn-generic-prompt: #555555;
+    --syn-generic-subhead: #800080;
+    --syn-generic-traceback: #aa0000;
+    --syn-regex: #008080;
+    --syn-string-symbol: #0000aa;
+    --syn-whitespace: #bbbbbb;
+    --syn-highlight-line: #ffffcc;
+
+    /* Typography */
+    --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      Helvetica, Arial, sans-serif, "Apple Color Emoji",
+      "Segoe UI Emoji";
+    --font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo,
+      Consolas, "DejaVu Sans Mono", monospace;
+    --font-size-base: 1.2rem;
+    --line-height-base: 1.5;
+
+    /* Spacing */
+    --content-max-width: 60rem;
+    --content-padding-x: 3rem;
+    --content-padding-x-mobile: 1rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-bg: #1a1a1a;
+      --color-surface: #222222;
+      --color-text: #e0e0e0;
+      --color-text-muted: #a0a0a0;
+      --color-link: #6db3f2;
+      --color-link-hover: #9dcbf7;
+      --color-link-visited: #b39ddb;
+      --color-border: #444444;
+      --color-border-light: #333333;
+      --color-accent: #e872a2;
+
+      --color-header-bg: #0b0c0c;
+      --color-header-text: #ffffff;
+      --color-footer-bg: #1a1a1a;
+      --color-footer-text: #a0a0a0;
+
+      --color-code-bg: #2a2a2a;
+      --color-code-border: #3a3a3a;
+      --color-code-text: #e0e0e0;
+
+      --color-inline-code-bg: #2a2a2a;
+
+      /* Syntax highlighting — dark (fruity-inspired) */
+      --syn-comment: #75a060;
+      --syn-comment-preproc: #ff6666;
+      --syn-keyword: #fb660a;
+      --syn-keyword-type: #cdcaa9;
+      --syn-string: #0086d2;
+      --syn-number: #0086f7;
+      --syn-name-attr: #ff0086;
+      --syn-name-builtin: #e0e0e0;
+      --syn-name-class: #e0e0e0;
+      --syn-name-const: #0086d2;
+      --syn-name-decorator: #e0e0e0;
+      --syn-name-entity: #e0e0e0;
+      --syn-name-function: #ff0086;
+      --syn-name-namespace: #e0e0e0;
+      --syn-name-tag: #fb660a;
+      --syn-name-variable: #fb660a;
+      --syn-operator: #e0e0e0;
+      --syn-error: #ffffff;
+      --syn-error-bg: transparent;
+      --syn-generic-deleted: #e0e0e0;
+      --syn-generic-error: #e0e0e0;
+      --syn-generic-heading: #ffffff;
+      --syn-generic-inserted: #e0e0e0;
+      --syn-generic-output: #444444;
+      --syn-generic-prompt: #e0e0e0;
+      --syn-generic-subhead: #ffffff;
+      --syn-generic-traceback: #e0e0e0;
+      --syn-regex: #0086d2;
+      --syn-string-symbol: #0086d2;
+      --syn-whitespace: #888888;
+      --syn-highlight-line: #333333;
+    }
+  }
 }
 
-h2 {
-  font-size: 1.4rem;
+/* ================================================================
+   Base — element-level styles
+   ================================================================ */
+@layer base {
+  body {
+    font-family: var(--font-body);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.15rem;
+  }
+
+  a {
+    color: var(--color-link);
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: var(--color-link-visited);
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: var(--color-link-hover);
+  }
+
+  blockquote {
+    font-style: italic;
+    border-left: 4px solid var(--color-border);
+    margin-left: 0;
+    padding-left: 1rem;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid var(--color-border-light);
+    margin: 2rem 0;
+  }
+
+  code {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    background: var(--color-inline-code-bg);
+    padding: 0.15em 0.35em;
+    border-radius: 3px;
+  }
+
+  pre {
+    font-family: var(--font-mono);
+    font-size: 0.85em;
+    line-height: 1.45;
+  }
+
+  /* Code inside pre blocks shouldn't get the inline treatment */
+  pre code {
+    background: none;
+    padding: 0;
+    border-radius: 0;
+    font-size: inherit;
+  }
+
+  img,
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  th,
+  td {
+    text-align: left;
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid var(--color-border-light);
+  }
+
+  th {
+    font-weight: 600;
+  }
 }
 
-h3 {
-  font-size: 1.1rem;
+/* ================================================================
+   Layout — page shell
+   ================================================================ */
+@layer layout {
+  .header {
+    padding: 1rem;
+    color: var(--color-header-text);
+    background-color: var(--color-header-bg);
+  }
+
+  .header a {
+    color: var(--color-header-text);
+    display: block;
+    max-width: var(--content-max-width);
+    margin-inline: auto;
+    font-weight: 700;
+  }
+
+  .header a:visited {
+    color: var(--color-header-text);
+  }
+
+  main {
+    background-color: var(--color-surface);
+  }
+
+  .content {
+    padding: 1rem var(--content-padding-x);
+    min-height: 700px;
+    max-width: var(--content-max-width);
+    margin-inline: auto;
+  }
+
+  @media (max-width: 768px) {
+    .content {
+      padding-left: var(--content-padding-x-mobile);
+      padding-right: var(--content-padding-x-mobile);
+    }
+  }
+
+  footer {
+    border-top: 10px solid var(--color-accent);
+    padding: 1rem;
+    color: var(--color-footer-text);
+    background-color: var(--color-footer-bg);
+    max-width: var(--content-max-width);
+    margin-inline: auto;
+  }
+
+  footer img {
+    vertical-align: bottom;
+    width: 32px;
+    height: 32px;
+  }
 }
 
-.content img,svg {
-  width: 40rem;
-  max-width: 100%;
+/* ================================================================
+   Components — reusable patterns
+   ================================================================ */
+@layer components {
+
+  /* Post list on the home page */
+  .post {
+    margin-left: 1rem;
+    border-left: 5px solid var(--color-border);
+    padding-left: 1rem;
+  }
+
+  /* Figures */
+  .content figure {
+    border-left: 5px solid var(--color-border);
+    padding-left: 1.25rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .content figcaption {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+  }
+
+  /* Aside callouts */
+  aside {
+    border-left: 4px solid var(--color-border);
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    color: var(--color-text-muted);
+  }
+
+  aside h3 {
+    color: var(--color-text);
+  }
+
+  /* Avatar */
+  img.avatar {
+    width: 10rem;
+    border-radius: 50%;
+    float: right;
+  }
+
+  /* Images in content */
+  .content img,
+  .content svg {
+    max-width: min(40rem, 100%);
+  }
+
+  /* Code blocks */
+  pre.highlight,
+  div.highlight pre {
+    overflow: auto;
+    padding: 1rem;
+    background: var(--color-code-bg);
+    border: 1px solid var(--color-code-border);
+    border-radius: 4px;
+    color: var(--color-code-text);
+  }
 }
 
-img.avatar {
-  width: 10rem;
-  border-radius: 5rem;
-  float: right;
+/* ================================================================
+   Syntax highlighting — Rouge token colours via custom properties
+   ================================================================ */
+@layer syntax {
+  .highlight .hll {
+    background-color: var(--syn-highlight-line);
+  }
+
+  .highlight .c {
+    color: var(--syn-comment);
+    font-style: italic;
+  }
+
+  /* Comment */
+  .highlight .err {
+    color: var(--syn-error);
+    background-color: var(--syn-error-bg);
+  }
+
+  /* Error */
+  .highlight .k {
+    color: var(--syn-keyword);
+    font-weight: bold;
+  }
+
+  /* Keyword */
+  .highlight .cm {
+    color: var(--syn-comment);
+    font-style: italic;
+  }
+
+  /* Comment.Multiline */
+  .highlight .cp {
+    color: var(--syn-comment-preproc);
+    font-weight: bold;
+  }
+
+  /* Comment.Preproc */
+  .highlight .c1 {
+    color: var(--syn-comment);
+    font-style: italic;
+  }
+
+  /* Comment.Single */
+  .highlight .cs {
+    color: var(--syn-keyword);
+    font-style: italic;
+  }
+
+  /* Comment.Special */
+  .highlight .gd {
+    color: var(--syn-generic-deleted);
+  }
+
+  /* Generic.Deleted */
+  .highlight .ge {
+    font-style: italic;
+  }
+
+  /* Generic.Emph */
+  .highlight .gr {
+    color: var(--syn-generic-error);
+  }
+
+  /* Generic.Error */
+  .highlight .gh {
+    color: var(--syn-generic-heading);
+    font-weight: bold;
+  }
+
+  /* Generic.Heading */
+  .highlight .gi {
+    color: var(--syn-generic-inserted);
+  }
+
+  /* Generic.Inserted */
+  .highlight .go {
+    color: var(--syn-generic-output);
+  }
+
+  /* Generic.Output */
+  .highlight .gp {
+    color: var(--syn-generic-prompt);
+  }
+
+  /* Generic.Prompt */
+  .highlight .gs {
+    font-weight: bold;
+  }
+
+  /* Generic.Strong */
+  .highlight .gu {
+    color: var(--syn-generic-subhead);
+    font-weight: bold;
+  }
+
+  /* Generic.Subheading */
+  .highlight .gt {
+    color: var(--syn-generic-traceback);
+  }
+
+  /* Generic.Traceback */
+  .highlight .kc {
+    color: var(--syn-keyword);
+    font-weight: bold;
+  }
+
+  /* Keyword.Constant */
+  .highlight .kd {
+    color: var(--syn-keyword);
+    font-weight: bold;
+  }
+
+  /* Keyword.Declaration */
+  .highlight .kn {
+    color: var(--syn-keyword);
+    font-weight: bold;
+  }
+
+  /* Keyword.Namespace */
+  .highlight .kp {
+    color: var(--syn-keyword);
+  }
+
+  /* Keyword.Pseudo */
+  .highlight .kr {
+    color: var(--syn-keyword);
+    font-weight: bold;
+  }
+
+  /* Keyword.Reserved */
+  .highlight .kt {
+    color: var(--syn-keyword-type);
+    font-weight: bold;
+  }
+
+  /* Keyword.Type */
+  .highlight .m {
+    color: var(--syn-number);
+    font-weight: bold;
+  }
+
+  /* Literal.Number */
+  .highlight .s {
+    color: var(--syn-string);
+  }
+
+  /* Literal.String */
+  .highlight .na {
+    color: var(--syn-name-attr);
+    font-weight: bold;
+  }
+
+  /* Name.Attribute */
+  .highlight .nb {
+    color: var(--syn-name-builtin);
+  }
+
+  /* Name.Builtin */
+  .highlight .nc {
+    color: var(--syn-name-class);
+    text-decoration: underline;
+  }
+
+  /* Name.Class */
+  .highlight .no {
+    color: var(--syn-name-const);
+  }
+
+  /* Name.Constant */
+  .highlight .nd {
+    color: var(--syn-name-decorator);
+  }
+
+  /* Name.Decorator */
+  .highlight .ni {
+    color: var(--syn-name-entity);
+    font-weight: bold;
+  }
+
+  /* Name.Entity */
+  .highlight .nf {
+    color: var(--syn-name-function);
+  }
+
+  /* Name.Function */
+  .highlight .nn {
+    color: var(--syn-name-namespace);
+    text-decoration: underline;
+  }
+
+  /* Name.Namespace */
+  .highlight .nt {
+    color: var(--syn-name-tag);
+    font-weight: bold;
+  }
+
+  /* Name.Tag */
+  .highlight .nv {
+    color: var(--syn-name-variable);
+  }
+
+  /* Name.Variable */
+  .highlight .ow {
+    color: var(--syn-operator);
+  }
+
+  /* Operator.Word */
+  .highlight .w {
+    color: var(--syn-whitespace);
+  }
+
+  /* Text.Whitespace */
+  .highlight .mf {
+    color: var(--syn-number);
+    font-weight: bold;
+  }
+
+  /* Literal.Number.Float */
+  .highlight .mh {
+    color: var(--syn-number);
+    font-weight: bold;
+  }
+
+  /* Literal.Number.Hex */
+  .highlight .mi {
+    color: var(--syn-number);
+    font-weight: bold;
+  }
+
+  /* Literal.Number.Integer */
+  .highlight .mo {
+    color: var(--syn-number);
+    font-weight: bold;
+  }
+
+  /* Literal.Number.Oct */
+  .highlight .sb {
+    color: var(--syn-string);
+  }
+
+  /* Literal.String.Backtick */
+  .highlight .sc {
+    color: var(--syn-string);
+  }
+
+  /* Literal.String.Char */
+  .highlight .sd {
+    color: var(--syn-string);
+  }
+
+  /* Literal.String.Doc */
+  .highlight .s2 {
+    color: var(--syn-string);
+  }
+
+  /* Literal.String.Double */
+  .highlight .se {
+    color: var(--syn-string);
+  }
+
+  /* Literal.String.Escape */
+  .highlight .sh {
+    color: var(--syn-string);
+  }
+
+  /* Literal.String.Heredoc */
+  .highlight .si {
+    color: var(--syn-string);
+  }
+
+  /* Literal.String.Interpol */
+  .highlight .sx {
+    color: var(--syn-string);
+  }
+
+  /* Literal.String.Other */
+  .highlight .sr {
+    color: var(--syn-regex);
+  }
+
+  /* Literal.String.Regex */
+  .highlight .s1 {
+    color: var(--syn-string);
+  }
+
+  /* Literal.String.Single */
+  .highlight .ss {
+    color: var(--syn-string-symbol);
+  }
+
+  /* Literal.String.Symbol */
+  .highlight .bp {
+    color: var(--syn-name-builtin);
+  }
+
+  /* Name.Builtin.Pseudo */
+  .highlight .vc {
+    color: var(--syn-name-variable);
+  }
+
+  /* Name.Variable.Class */
+  .highlight .vg {
+    color: var(--syn-name-variable);
+  }
+
+  /* Name.Variable.Global */
+  .highlight .vi {
+    color: var(--syn-name-variable);
+  }
+
+  /* Name.Variable.Instance */
+  .highlight .il {
+    color: var(--syn-number);
+    font-weight: bold;
+  }
+
+  /* Literal.Number.Integer.Long */
 }
 
-.content img.fixed-width-20 {
-  width: 20rem;
-}
-
-.content figure {
-  border-left: 5px solid #cccccc;
-  padding-left: 20px;
-}
-
-.content figcaption {
-  font-size: 0.9rem;
-  color: #444444;
-}
-
-/* Header */
-.header {
-  padding: 1rem;
-  color: #ffffff;
-  background-color: #000000;
-}
-.header a {
-  color: #ffffff;
-  display: block;
-  max-width: 60rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-/* Footer */
-footer {
-  border-top: 10px solid #d53880;
-  padding: 1rem;
-  color: #454a4c;
-  background-color: #dee0e2;
-  max-width: 60rem;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-footer img {
-  vertical-align: bottom;
-  height: 32px;
-  width: 32px;
-}
-
-/* Posts */
-.post {
-  margin-left: 1rem;
-  border-left: 5px solid #cccccc;
-  padding-left: 1rem;
-}
-
-aside {
-  border-left: 4px solid lightgray;
-  padding-left: 6px;
-}
-
-/* Code snippets */
-pre.highlight {
-  overflow: auto;
-  padding: 15px;
-  background: #f9f9f8;
-  border: 1px solid #bfc1c3;
+/* ================================================================
+   Utilities
+   ================================================================ */
+@layer utilities {
+  .content img.fixed-width-20 {
+    width: 20rem;
+  }
 }
