@@ -19,7 +19,7 @@ like to do that.
 ## Elsewhere on the internet
 
 * [https://keybase.io/richardtowers](https://keybase.io/richardtowers)
-* [https://twitter.com/richardtowers](https://twitter.com/RichardTowers)
+* [https://hachyderm.io/@richardtowers](https://hachyderm.io/@richardtowers)
 * [https://github.com/richardtowers](https://github.com/richardTowers)
 
 ## Posts
