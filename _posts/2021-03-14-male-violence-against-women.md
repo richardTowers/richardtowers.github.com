@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "A dark week for international women's day"
+tags: [personal]
 excerpt: "Reflections on international women's day and the events surrounding the tragic death of Sarah Everard"
 ---
 

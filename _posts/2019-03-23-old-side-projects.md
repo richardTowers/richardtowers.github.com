@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Old side projects"
+tags: [javascript, meta]
 excerpt: >
   Looking back on some old side projects from when I was learning to code.
 ---

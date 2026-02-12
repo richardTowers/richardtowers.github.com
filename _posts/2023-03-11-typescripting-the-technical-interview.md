@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Typescripting the technical interview"
+tags: [typescript]
 excerpt: "An homage to Aphyr's Typing the technical interview"
 image: /static/images/8-queens-solution.gif
 ---

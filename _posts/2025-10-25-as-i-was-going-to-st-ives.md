@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "As I was going to St Ives..."
+tags: [postgres, sql]
 excerpt: "I met a man with seven wives..."
 image: /static/images/St_Nicholas-V40-P2-164.jpg
 ---

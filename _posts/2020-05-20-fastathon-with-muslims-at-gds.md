@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Reflections on fasting for one day in Ramadan"
+tags: [personal, gds]
 excerpt: >
   I joined a fast-a-thon organised by muslim colleagues at GDS.
 

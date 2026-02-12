@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Representing graphs in Postgresql"
+tags: [postgres, sql]
 excerpt: "Some tricks and techniques for working with graph or tree like data in Postgresql"
 ---
 

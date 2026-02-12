@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Terraforming the Advent of Code"
+tags: [terraform, advent-of-code]
 excerpt: >
   Sometimes everything looks like a nail, but all you have is a banana.
 ---

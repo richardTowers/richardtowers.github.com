@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Content-addressable storage with postgres"
+tags: [postgres, gds]
 excerpt: >
   At work we've got a database backed email system that's running into some
   performance issues. In particular, we're placing the database's disk under a

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Little boats, big boats; little teams, big teams"
+tags: [personal, gds]
 image: /static/images/island-sailing-club-sonar.jpg
 excerpt: >
   Sailing little boats is a very different experience to sailing big boats.

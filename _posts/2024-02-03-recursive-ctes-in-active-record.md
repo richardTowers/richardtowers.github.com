@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Recursive CTEs in ActiveRecord"
+tags: [ruby, postgres, sql]
 excerpt: "Using ActiveRecord / Arel to write the example recursive CTE from the Postgresql docs"
 ---
 

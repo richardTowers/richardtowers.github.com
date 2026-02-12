@@ -2,5 +2,12 @@
 layout: default
 ---
 <article>
+{% if page.tags.size > 0 %}
+<div class="tags">
+  {% for tag in page.tags %}
+  <span class="tag">{{ tag }}</span>
+  {% endfor %}
+</div>
+{% endif %}
 {{ content }}
 </article>

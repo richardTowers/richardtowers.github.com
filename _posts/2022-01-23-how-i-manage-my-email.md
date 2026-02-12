@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "How I manage my email"
+tags: [productivity]
 excerpt: >
   This is a post on how I manage my email inbox. Should be a strong contender for my most boring blog post.
 image: /static/images/screenshot-of-gmail-grafana-dashboard.png

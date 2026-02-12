@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "We're going on a certificate hunt!"
+tags: [cryptography]
 excerpt: "We're going to catch an X.509 certificate. What a beautiful day! We're not scared."
 ---
 

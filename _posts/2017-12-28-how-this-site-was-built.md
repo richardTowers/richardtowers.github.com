@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "How this site was built"
+tags: [meta]
 excerpt: >
   How the content of this website made its way from my keyboard to your computer screen.
 ---

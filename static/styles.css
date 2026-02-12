@@ -321,6 +321,24 @@
     padding-left: 1rem;
   }
 
+  /* Tags */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .tag {
+    display: inline-block;
+    padding: 0.15rem 0.5rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    background: var(--color-border-light);
+    color: var(--color-text-muted);
+  }
+
   /* Figures */
   .content figure {
     border-left: 5px solid var(--color-border);
