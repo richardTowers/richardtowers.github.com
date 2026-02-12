@@ -55,10 +55,10 @@ fragments = roots.map { |_, body| linkify_timestamps(body) }
 index = <<~HTML
 ---
 layout: default
-title: Shitposts
+title: Twitter archive
 ---
-<h1>Shitposts</h1>
-<p>An archive of tweets from my deleted Twitter account.</p>
+<h1>Twitter archive</h1>
+<p>An archive of tweets from my deleted Twitter account. Elon Musk can fuck off.</p>
 
 #{fragments.join("\n")}
 HTML

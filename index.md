@@ -18,13 +18,10 @@ like to do that.
 
 ## Elsewhere on the internet
 
-* [https://keybase.io/richardtowers](https://keybase.io/richardtowers)
-* [https://hachyderm.io/@richardtowers](https://hachyderm.io/@richardtowers)
-* [https://github.com/richardtowers](https://github.com/richardTowers)
-
-## [Shitposts](/shitposts/)
-
-An archive of tweets from my deleted Twitter account.
+* [Mastodon](https://hachyderm.io/@richardtowers)
+* [GitHub](https://github.com/richardTowers)
+* [Keybase](https://keybase.io/richardtowers)
+* [Twitter archive](/shitposts/)
 
 ## Posts
 
