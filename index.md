@@ -28,7 +28,9 @@ like to do that.
 {% for post in site.posts %}
 	<div class="post">
 		<h3><a href="{{ post.url }}">{{post.title}}</a></h3>
-		{{ post.excerpt }}
+		<time class="post-date" datetime="{{ post.date | date: '%Y-%m-%d' }}">
+		  {{ post.date | date: "%-d %b %Y" }}
+		</time>
 		{% if post.tags.size > 0 %}
 		<div class="tags">
 		  {% for tag in post.tags %}
@@ -36,6 +38,7 @@ like to do that.
 		  {% endfor %}
 		</div>
 		{% endif %}
+		{{ post.excerpt }}
 	</div>
 {% endfor %}
 </div>

@@ -2,6 +2,9 @@
 layout: default
 ---
 <article>
+<time class="post-date" datetime="{{ page.date | date: '%Y-%m-%d' }}">
+  {{ page.date | date: "%-d %b %Y" }}
+</time>
 {% if page.tags.size > 0 %}
 <div class="tags">
   {% for tag in page.tags %}
