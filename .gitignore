@@ -1,3 +1,5 @@
 _site/
+_twitter-dump/
 .DS_Store
 *.swp
+/node_modules

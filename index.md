@@ -22,6 +22,10 @@ like to do that.
 * [https://hachyderm.io/@richardtowers](https://hachyderm.io/@richardtowers)
 * [https://github.com/richardtowers](https://github.com/richardTowers)
 
+## [Shitposts](/shitposts/)
+
+An archive of tweets from my deleted Twitter account.
+
 ## Posts
 
 <div>
